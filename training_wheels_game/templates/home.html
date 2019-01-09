@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}My Games{% endblock %}
 
 {% block content %}
 {% if user.is_authenticated %}
     Hi {{ user.username }}!
+    <p>Game List: </p>
+    <table style="width: 50%">
+        <tr>
+            <th>Game Title</th>
+            <th>Players</th>
+            <th>Join</th>
+        </tr>
+    </table>
     <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>

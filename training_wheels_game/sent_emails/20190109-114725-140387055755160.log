@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: fenos53@gmail.com
+Date: Wed, 09 Jan 2019 11:47:25 -0000
+Message-ID: <154703444507.1601.3810433993099332502@michal-MS-7846>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/Mg/52u-cffa29f959ce3d544177/
+
+Your username, in case you've forgotten: fenos
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
