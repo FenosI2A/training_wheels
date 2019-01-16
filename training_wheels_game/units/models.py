@@ -20,3 +20,11 @@ class Unit (models.Model):
     firearm = models.BooleanField()
     cavalry = models.BooleanField()
     polearms = models.BooleanField()
+
+
+class Terrain (models.Model):
+    TYPE_OF_TERRAIN = (
+        ('P', 'Plain'),
+        ('F', 'Forest'),
+        ('W', 'Water')
+    )

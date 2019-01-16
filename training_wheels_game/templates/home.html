@@ -5,17 +5,38 @@
 {% block content %}
 {% if user.is_authenticated %}
     Hi {{ user.username }}!
+    <p> <a href="{% url 'create_new_game' %}">
+        <button type="submit">Create new game</button>
+        </a>
+    </p>
     <p>Game List: </p>
-    <table style="width: 50%">
-        <tr>
-            <th>Game Title</th>
-            <th>Players</th>
-            <th>Join</th>
-        </tr>
-    </table>
+        {% if game_list %}
+        <table width="50%" border="3">
+            <tr>
+                <th>Game Title</th>
+                <th>Player 1</th>
+                <th>Player 2</th>
+                <th>Game State</th>
+                <th>Active Player</th>
+            </tr>
+            {% for game in game_list %}
+                <tr>
+                    <td>{{ game.game_title }}</td>
+                    <td>{{ game.player_1 }}</td>
+                    <td>{{ game.player_2 }}</td>
+                    <td>{{ game.game_state }}</td>
+                    <td>{{ game.active_player }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p>No games avalible yet</p>
+        {% endif %}
     <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
+  <p>You are not logged in or if you are new player please create an account</p>
+  <a href="{% url 'login' %}"><input type="submit" value="Login"></a>
+  <a href="{% url 'signup' %}"><input type="submit" value="Sign up"></a>
+
 {% endif %}
 {% endblock %}
