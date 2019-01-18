@@ -6,7 +6,7 @@
     <form action="{% url 'create_new_game' %}" method="post">
         {% csrf_token %}
         <h1>Create New Game</h1>
-        <p><label for="game_title">Game title </label><input type="text" name="game_title"/> </p>
+        {{ form.as_p }}
         <input type="submit" value="Create">
     </form>
 {% endblock %}

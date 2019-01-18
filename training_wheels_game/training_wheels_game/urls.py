@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', views.game_list, name='home'),
-    path('create_new_game/', views.create_new_game, name='create_new_game'),
+    path('create_new_game/', views.create_new_game_with_model_form, name='create_new_game'),
     path('signup/', views.SignUp.as_view(), name='signup'),
 ]

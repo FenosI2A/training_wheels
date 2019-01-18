@@ -10,6 +10,7 @@
         </a>
     </p>
     <p>Game List: </p>
+        <form>
         {% if game_list %}
         <table width="50%" border="3">
             <tr>
@@ -32,6 +33,7 @@
         {% else %}
             <p>No games avalible yet</p>
         {% endif %}
+        </form>
     <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in or if you are new player please create an account</p>
