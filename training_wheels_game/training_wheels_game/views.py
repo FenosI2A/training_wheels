@@ -1,5 +1,8 @@
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from django.shortcuts import render, redirect
-from games.models import Games
+from games.models import Game
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.views import generic
@@ -11,46 +14,35 @@ class SignUp(generic.CreateView):
     success_url = reverse_lazy('login')
     template_name = 'signup.html'
 
+    def form_valid(self, form):
+        form.save()
+        username = self.request.POST['username']
+        password = self.request.POST['password1']
+        user = authenticate(username=username, password=password)
+        login(self.request, user)
+        return redirect('my_games')
 
+
+@login_required
 def game_list(request):
-    games_info = Games.objects.all()
+    games_info = Game.objects.filter(player_1=request.user)
     context = {
         "game_list": games_info
     }
-    return render(request, "home.html", context)
+    return render(request, "my_games.html", context)
 
 
-# def create_new_game(request):
-#     if request.method == 'POST':
-#         game_title = request.POST['game_name']
-#         player_1 = request.user
-#         game_state = "State"
-#         game_obj = Games(game_title=game_title, player_1=player_1, game_state=game_state)
-#         game_obj.save()
-#         return redirect('home')
-#
-#     else:
-#         return render(request, "Create_new_game.html", {})
+@login_required
+def available_game_list(request):
+    games_info = Game.objects.filter(Q(player_2__isnull=True) | Q(player_1__isnull=True)).exclude(Q(player_1=request.user) | Q(player_2=request.user))
+    print(str(games_info.query))
+    context = {
+        "game_list": games_info
+    }
+    return render(request, "available_games.html", context)
 
 
-# def create_new_game_with_form(request):
-#
-#     if request.method == 'POST':
-#         form = CreateNewGameForm(request.POST)
-#         if form.is_valid():
-#             name = form.cleaned_data['game_name']
-#             player_1 = request.user
-#             game_state = "State"
-#             game_obj = Games(game_title=name, player_1=player_1, game_state=game_state)
-#             game_obj.save()
-#             return redirect('home')
-#
-#     else:
-#         form = CreateNewGameForm()
-#
-#     return render(request, 'Create_new_game.html', {})
-
-
+@login_required
 def create_new_game_with_model_form(request):
 
     if request.method == 'POST':
@@ -65,4 +57,12 @@ def create_new_game_with_model_form(request):
     else:
         form = CreateNewGameModelForm()
 
-    return render(request, 'Create_new_game.html', {'form' : form})
+    return render(request, 'Create_new_game.html', {'form': form})
+
+#widok ktory przyjmuje game ID w URLu i wyswietla tą grę. Tak naprawde wyswietlenie gry to napis "tu jest gra nr {id}". Rzucamy 404 jesli gry o takim ID nie ma w bazie.
+
+
+def home(request):
+    if request.user.is_authenticated:
+        return redirect('my_games')
+    return render(request, "home.html")

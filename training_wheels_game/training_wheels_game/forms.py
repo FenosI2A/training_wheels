@@ -1,5 +1,5 @@
 from django import forms
-from games.models import Games
+from games.models import Game
 
 
 # class CreateNewGameForm(forms.Form):
@@ -8,5 +8,5 @@ from games.models import Games
 
 class CreateNewGameModelForm(forms.ModelForm):
     class Meta:
-        model = Games
+        model = Game
         fields = ('game_title',)
