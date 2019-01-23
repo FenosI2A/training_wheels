@@ -26,4 +26,6 @@ urlpatterns = [
     path('available_games/', views.available_game_list, name='available_games'),
     path('create_new_game/', views.create_new_game_with_model_form, name='create_new_game'),
     path('signup/', views.SignUp.as_view(), name='signup'),
+    path('game/<int:game_id>/', views.game_view, name='game_view'),
+    path('game/<int:game_id>/join/', views.join_game_view, name='join_game_view'),
 ]

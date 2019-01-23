@@ -6,21 +6,17 @@ class TicTacToeGame:
     def start_game(self, game, joining_player):
         if game.active_player!=None:
             raise Exception("Cannot start game, this game has already started!")
+        if game.player_1==joining_player:
+            raise Exception("cannot join the game which you created")
         game.player_2 = joining_player
         game.game_state = json.dumps([['', '', ''], ['', '', ''], ['', '', '']])
         game.active_player = game.player_1
         game.save()
 
 
-
-
-
-x = TicTacToeGame()
-
-
-
-x.start_game()
-
+    # @classmethod
+    # def statyczna(cls, lol, lol2):
+    #     return lol + lol2
 
 # ZALOZENIA:
 # * player_1 zawsze zaczyna.

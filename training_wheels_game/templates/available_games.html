@@ -13,16 +13,16 @@
                 <th>Game Title</th>
                 <th>Player 1</th>
                 <th>Player 2</th>
-                <th>Game State</th>
                 <th>Active Player</th>
+                <th></th>
             </tr>
             {% for game in game_list %}
                 <tr>
                     <td>{{ game.game_title }}</td>
                     <td>{{ game.player_1 }}</td>
                     <td>{{ game.player_2 }}</td>
-                    <td>{{ game.game_state }}</td>
                     <td>{{ game.active_player }}</td>
+                    <td><a href="{% url 'join_game_view' game.id %}">Join this game</a></td>
                 </tr>
             {% endfor %}
         </table>

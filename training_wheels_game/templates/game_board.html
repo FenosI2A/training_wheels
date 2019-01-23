@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Game{% endblock %}
+
+{% block content %}
+    <h1>This is game {{game.id}}</h1>
+    <p>Player 1: {{ game.player_1.username }}</p>
+    <p>Player 2: {{ game.player_2.username }}</p>
+    <p>Active Player: {{ game.active_player.username }}</p>
+
+{% endblock %}
+

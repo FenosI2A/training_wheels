@@ -1,7 +1,9 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
+
+from game_logic.tictactoe.main import TicTacToeGame
 from games.models import Game
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
@@ -59,10 +61,25 @@ def create_new_game_with_model_form(request):
 
     return render(request, 'Create_new_game.html', {'form': form})
 
-#widok ktory przyjmuje game ID w URLu i wyswietla tą grę. Tak naprawde wyswietlenie gry to napis "tu jest gra nr {id}". Rzucamy 404 jesli gry o takim ID nie ma w bazie.
+
+@login_required
+def game_view(request, game_id):
+    game = get_object_or_404(Game, pk=game_id)
+    context = {
+        "game": game
+    }
+    return render(request, 'game_board.html', context)
 
 
 def home(request):
     if request.user.is_authenticated:
         return redirect('my_games')
     return render(request, "home.html")
+
+
+@login_required
+def join_game_view(request, game_id):
+    game = Game.objects.get(pk=game_id)
+    TicTacToeGame().start_game(game, request.user)
+    return redirect('game_view', game_id=game_id)
+

@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97058fec-5968-4443-99e6-eb00ac69de7d" name="Default Changelist" comment="Added forms and model_forms">
-      <change afterPath="$PROJECT_DIR$/game_logic/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/tictactoe/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_logic/tictactoe/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/available_games.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_games.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/game_board.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_logic/tictactoe/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_logic/tictactoe/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/games/migrations/0002_auto_20190116_1420.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/games/migrations/0003_auto_20190116_1421.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/games/migrations/0004_auto_20190116_1505.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/games/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_wheels_game/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_wheels_game/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_wheels_game/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_wheels_game/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/available_games.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/available_games.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/training_wheels_game/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_wheels_game/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/training_wheels_game/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/training_wheels_game/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/bin/pip" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/pip" afterDir="false" />
@@ -349,8 +343,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/training_wheels_game/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="470">
+              <caret line="29" column="27" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="27" />
               <folding>
                 <element signature="e#644#676#0" expanded="true" />
               </folding>
@@ -358,11 +352,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/training_wheels_game/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="384">
+              <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -371,10 +365,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/available_games.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/games/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            <state relative-caret-position="180">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="17" />
               <folding>
                 <element signature="e#24#67#0" expanded="true" />
               </folding>
@@ -382,59 +385,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/training_wheels_game/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/games/apps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/training_wheels_game/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game_logic/tictactoe/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="360">
+              <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
+        <entry file="file://$PROJECT_DIR$/templates/game_board.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+            <state relative-caret-position="144">
+              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
+        <entry file="file://$PROJECT_DIR$/templates/Create_new_game.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="90">
+              <caret line="5" column="46" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -442,8 +415,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="162">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -453,16 +426,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Game</find>
-      <find>home</find>
       <find>Games</find>
+      <find>home</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/games</dir>
@@ -488,7 +461,6 @@
         <option value="$PROJECT_DIR$/templates/registration/password_reset_form.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_complete.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" />
         <option value="$PROJECT_DIR$/units/models.py" />
@@ -497,20 +469,23 @@
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/mygames.html" />
         <option value="$PROJECT_DIR$/templates/avalible_games.html" />
-        <option value="$PROJECT_DIR$/templates/available_games.html" />
-        <option value="$PROJECT_DIR$/training_wheels_game/urls.py" />
         <option value="$PROJECT_DIR$/templates/my_games.html" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/training_wheels_game/forms.py" />
-        <option value="$PROJECT_DIR$/training_wheels_game/settings.py" />
         <option value="$PROJECT_DIR$/games/models.py" />
-        <option value="$PROJECT_DIR$/game_logic/tictactoe/main.py" />
+        <option value="$PROJECT_DIR$/training_wheels_game/settings.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/game_board.html" />
+        <option value="$PROJECT_DIR$/training_wheels_game/urls.py" />
         <option value="$PROJECT_DIR$/training_wheels_game/views.py" />
+        <option value="$PROJECT_DIR$/templates/available_games.html" />
+        <option value="$PROJECT_DIR$/game_logic/tictactoe/main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="97" />
+    <option name="x" value="1987" />
+    <option name="y" value="244" />
     <option name="width" value="1843" />
     <option name="height" value="789" />
   </component>
@@ -531,6 +506,11 @@
               <item name="training_wheels_game" type="b2602c69:ProjectViewProjectNode" />
               <item name="training_wheels_game" type="462c0819:PsiDirectoryNode" />
               <item name="games" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training_wheels_game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training_wheels_game" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="training_wheels_game" type="b2602c69:ProjectViewProjectNode" />
@@ -614,7 +594,7 @@
       <workItem from="1546943587293" duration="4082000" />
       <workItem from="1546955344121" duration="32000" />
       <workItem from="1546955610320" duration="13796000" />
-      <workItem from="1547204833866" duration="49988000" />
+      <workItem from="1547204833866" duration="59376000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit, creating repo">
       <created>1546956164288</created>
@@ -658,27 +638,33 @@
       <option name="project" value="LOCAL" />
       <updated>1547826864514</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Starting to work on logic&#10;Complete views and registration&#10;Complete my_games, and available_games views">
+      <created>1548086007902</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1548086007902</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67898000" />
+    <option name="totallyTimeSpent" value="77286000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
-    <editor active="true" />
+    <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19690502" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20420587" />
       <window_info anchor="bottom" id="Database Console" sideWeight="0.4980631" weight="0.32963374" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.26563364" side_tool="true" weight="0.34850165" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.26618704" side_tool="true" weight="0.34850165" />
       <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.4997233" weight="0.32852387" />
-      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.4980631" weight="0.3275862" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" sideWeight="0.52296627" visible="true" weight="0.36206895" />
+      <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.6515475" weight="0.3275862" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.52241194" weight="0.52913386" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.3297414" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.73436636" weight="0.33836207" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.39870688" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.7338129" visible="true" weight="0.336293" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.28079912" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -728,7 +714,9 @@
     <MESSAGE value="Reset password pages, no 3-rd party service" />
     <MESSAGE value="Major reset to tic tac toe" />
     <MESSAGE value="Added forms and model_forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added forms and model_forms" />
+    <MESSAGE value="Starting to work on logic&#10;Complete views and registration&#10;Complete my_games, and available_games views" />
+    <MESSAGE value="Joining game and starting game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Joining game and starting game" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -742,9 +730,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/signup.py" />
     <entry file="file://$PROJECT_DIR$/sent_emails/20190109-112919-139896481501080.log" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
@@ -926,13 +911,6 @@
     <entry file="file://$PROJECT_DIR$/templates/mygames.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Create_new_game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -964,51 +942,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/available_games.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/my_games.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="33" column="139" selection-start-line="33" selection-start-column="139" selection-end-line="33" selection-end-column="139" />
-          <folding>
-            <element signature="e#124#230#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/training_wheels_game/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="25" />
-          <folding>
-            <element signature="e#644#676#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,15 +968,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/training_wheels_game/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="242">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/my_games.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="33" column="139" selection-start-line="33" selection-start-column="139" selection-end-line="33" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_logic/tictactoe/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Create_new_game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training_wheels_game/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="e#644#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/game_board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/available_games.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/training_wheels_game/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="82" column="46" lean-forward="true" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/games/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="180">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="17" />
           <folding>
             <element signature="e#24#67#0" expanded="true" />
           </folding>
@@ -1048,18 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game_logic/tictactoe/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/training_wheels_game/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
         </state>
       </provider>
     </entry>
